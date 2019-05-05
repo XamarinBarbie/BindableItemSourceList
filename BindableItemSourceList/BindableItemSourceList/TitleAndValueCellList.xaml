@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="BindableItemSourceList.TitleAndValueCellList"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <ListView x:Name="myList" ItemsSource="{Binding Source={x:Reference this}, Path=ItemsSource}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Detail}"
+                              Text="{Binding Text}"
+                              TextColor="Black" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentView.Content>
+</ContentView>
